@@ -2,21 +2,18 @@
     "version": 2,
     "builds": [
         {
-            "src": "**/*.html",
+            "src": "/*.html",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "/assets/**/*",
             "use": "@vercel/static"
         }
     ],
     "routes": [
         {
-            "src": "/assets/(.*)",
-            "dest": "/assets/$1"
-        },
-        {
             "src": "/(.*)",
-            "dest": "/index.html",
-            "headers": {
-                "Content-Type": "text/html"
-            }
+            "dest": "/index.html"
         }
     ]
 }
