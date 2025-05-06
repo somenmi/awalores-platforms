@@ -12,13 +12,17 @@
         {
             "src": "/audio/**",
             "use": "@vercel/static"
+        },
+        {
+            "src": "/sitemap.xml",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "/robots.txt",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
-        {
-            "src": "/assets/(?<path>.*)",
-            "dest": "/assets/<path>"
-        },
         {
             "src": "/sitemap.xml",
             "dest": "/sitemap.xml",
@@ -32,6 +36,10 @@
             "headers": {
                 "Content-Type": "text/plain"
             }
+        },
+        {
+            "src": "/assets/(?<path>.*)",
+            "dest": "/assets/<path>"
         },
         {
             "src": "/audio/(?<path>.*)",
