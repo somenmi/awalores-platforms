@@ -6,11 +6,23 @@
             "use": "@vercel/static"
         },
         {
-            "src": "/assets/**/*",
+            "src": "/assets/**",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "/audio/**",
             "use": "@vercel/static"
         }
     ],
     "routes": [
+        {
+            "src": "/assets/(?<path>.*)",
+            "dest": "/assets/<path>"
+        },
+        {
+            "src": "/audio/(?<path>.*)",
+            "dest": "/audio/<path>"
+        },
         {
             "src": "/(.*)",
             "dest": "/index.html"
