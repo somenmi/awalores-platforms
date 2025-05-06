@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Andale Mono, monospace;
+    background-color: #242424;
+    /*background: linear-gradient(to bottom, #1a1a1a, #242424);*/
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.2rem;
+    color: #ffffff;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+h3 {
+    text-align: center;
+    color: #242424;
+    position: absolute;
+    top: -60px
+}
+
+header {
+    text-align: center;
+    color: #242424;
+    position: absolute;
+    top: -60px
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #242424;
+    margin: -20px;
+    width: 800px;
+    top: -50px;
+}
+
+@media (max-width: 768px) {
+    iframe {
+        width: 340px;
+        height: 50px;
+        border-radius: 8px;
+        filter: sepia(100%) saturate(0) brightness(35%);
+    }
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.change-on-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.change-on-hover::before,
+.change-on-hover::after {
+    content: 'AWALORES';
+    display: block;
+    text-align: center;
+    transition: opacity 1s ease-out;
+}
+
+.change-on-hover::after {
+    content: '升山人心囗尺仨丂';
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 71%;
+    position: absolute;
+    width: auto;
+    top: 1px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.change-on-hover:hover::before {
+    opacity: 0;
+}
+
+.change-on-hover:hover::after {
+    opacity: 1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 12px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #808080;
+    margin-bottom: 20px;
+    margin-top: -32px;
+    margin-left: 0px;
+}
+
+.platforms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.platforms a {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px;
+    background-color: #858891;
+    border-radius: 8px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.platforms a:hover {
+    background-color: #bebebe;
+    transform: translatex(-12px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.platform-icon {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.spacer {
+    height: 30px;
+}
+
+.header-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -8px;
+    margin-bottom: -46px;
+}
+
+.title-icon {
+    width: auto;
+    height: auto;
+    transition: transform 0.6s ease;
+}
+
+.spin-on-hover:hover {
+    animation: example 2s infinite
+}
+
+@keyframes example {
+    0% {
+        transform: scale(100%);
+        filter: none;
+    }
+
+    50% {
+        transform: scale(100%);
+        filter: none;
+    }
+
+    56% {
+        transform: scale(125%);
+        filter: drop-shadow(0 0 26px rgba(255, 200, 128, 0.2));
+    }
+
+    64% {
+        transform: scale(110%);
+        filter: none;
+    }
+
+    70% {
+        transform: scale(125%);
+        filter: drop-shadow(0 0 46px rgb(255, 200, 83, 0.25));
+    }
+
+    100% {
+        transform: scale(100%);
+        filter: none;
+    }
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 10px;
+    top: 10px;
+    z-index: 100;
+    color: rgb(255, 105, 105);
+}
