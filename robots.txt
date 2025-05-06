@@ -1,4 +1,4 @@
-User-agent: *
+User-agent: Yandex
 Allow: /
 
 Sitemap: https://awalores-platforms.vercel.app/sitemap.xml
