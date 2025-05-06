@@ -20,6 +20,14 @@
             "dest": "/assets/<path>"
         },
         {
+            "src": "/sitemap.xml",
+            "dest": "/sitemap.xml"
+        },
+        {
+            "src": "/robots.txt",
+            "dest": "/robots.txt"
+        },
+        {
             "src": "/audio/(?<path>.*)",
             "dest": "/audio/<path>"
         },
