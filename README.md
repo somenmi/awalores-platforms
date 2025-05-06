@@ -9,3 +9,4 @@
 
 - Готов первичный вид сайта
 - Деплой на Vercel
+- Add to: README.md; .nojekyll; vercel.json
